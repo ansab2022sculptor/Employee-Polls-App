@@ -6,14 +6,14 @@ import QuestionList from "./QuestionList";
 function Home({ done, newQs, auth }) {
   const navigate = useNavigate();
 
-  const value = [
+  const data = [
     {
-      key: "1",
-      title: "New Questions",
+      key: "d1",
+      title: "New",
       ids: newQs,
     },
     {
-      key: "2",
+      key: "d2",
       title: "Done",
       ids: done,
     },
@@ -26,7 +26,7 @@ function Home({ done, newQs, auth }) {
   return (
     <div>
       <div className="home-list">
-        {value.map((data) => (
+        {data.map((data) => (
           <div key={data.key}>
             <QuestionList title={data.title} ids={data.ids} />
           </div>
